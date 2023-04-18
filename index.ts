@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import './functionPurity/sideEffects';
+import './impurity/impurity.ts';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
