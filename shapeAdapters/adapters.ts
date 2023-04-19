@@ -24,12 +24,28 @@ function binary(fn) {
   };
 }
 
+function reverseArgs(fn) {
+  return function reversed(...args) {
+    return fn(...args.reverse());
+  };
+}
+
+function spreadArgs(fn) {
+  return function spread(...args) {
+    return fn(args.reduce((acc, curr) => acc + curr, 0));
+  };
+}
+
 function f(...args) {
   return args;
 }
 
 const g = unary(f);
 const h = binary(f);
+const r = reverseArgs(f);
+const s = spreadArgs(f);
 
 console.log(g(1, 2, 3, 4));
 console.log(h(1, 2, 3, 4));
+console.log(r(1, 2, 3, 4));
+console.log(s(1, 2, 3, 4));
