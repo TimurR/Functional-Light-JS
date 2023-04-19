@@ -3,6 +3,7 @@
 
   The practical motivation for partial application is that very often the functions obtained by supplying some but not all of the arguments to a function are useful; for example, many languages have a function or operator similar to plus_one. Partial application makes it easy to define these functions, for example by creating a function that represents the addition operator with 1 bound as its first argument. https://en.wikipedia.org/wiki/Partial_application
 */
+
 /*
   In mathematics and computer science, a higher-order function (HOF) is a function that does at least one of the following:
 
@@ -48,4 +49,4 @@ const s = spreadArgs(f);
 console.log(g(1, 2, 3, 4));
 console.log(h(1, 2, 3, 4));
 console.log(r(1, 2, 3, 4));
-console.log(s(1, 2, 3, 4));
+console.log(...s(1, 2, 3, 4));
