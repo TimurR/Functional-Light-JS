@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import './impurity/impurity.ts';
+import './shapeAdapters/adapters.ts';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
