@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import './shapeAdapters/adapters.ts';
+import './pointFree/ex.ts';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
