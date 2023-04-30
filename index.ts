@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import './pointFree/ex.ts';
+import './pipingAndComposition';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
