@@ -10,6 +10,8 @@ Abstraction in computer science is closely related to abstraction in mathematics
 
 In computer science, function composition is an act or mechanism to combine simple functions to build more complicated ones. Like the usual composition of functions in mathematics, the result of each function is passed as the argument of the next, and the result of the last one is the result of the whole. https://en.wikipedia.org/wiki/Function_composition_(computer_science)
 
+The composition of functions is always associative — a property inherited from the composition of relations.That is, if f, g, and h are composable, then f ∘ (g ∘ h) = (f ∘ g) ∘ h. Since the parentheses do not change the result, they are generally omitted. https://en.wikipedia.org/wiki/Function_composition
+
 */
 
 /*
