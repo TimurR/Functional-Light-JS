@@ -40,15 +40,17 @@ const double = (x) => x * 2;
 
 const half = (x) => x / 2;
 
-const compose =
-  (...arg) =>
+const compose1 =
+  (...fns) =>
   (val) =>
-    [...arg].reverse().reduce((acc, fn) => fn(acc), val);
+    [...fns].reduceRight((acc, fn) => fn(acc), val);
 
 const pipe =
-  (...arg) =>
+  (...fns) =>
   (val) =>
-    arg.reduce((acc, fn) => fn(acc), val);
+    fns.reduce((acc, fn) => fn(acc), val);
+
+const compose = (...fns) => pipe(...fns.reverse());
 
 const f1 = compose(increment, decrement);
 const f2 = pipe(decrement, increment);
