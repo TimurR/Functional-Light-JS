@@ -32,18 +32,13 @@ This is an exercise to practice composition.
 
 */
 
-function increment(x) {
-  return x + 1;
-}
-function decrement(x) {
-  return x - 1;
-}
-function double(x) {
-  return x * 2;
-}
-function half(x) {
-  return x / 2;
-}
+const increment = (x) => x + 1;
+
+const decrement = (x) => x - 1;
+
+const double = (x) => x * 2;
+
+const half = (x) => x / 2;
 
 const compose =
   (...arg) =>
