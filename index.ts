@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import './pipingAndComposition';
+import './immutability';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
