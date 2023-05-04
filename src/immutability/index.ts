@@ -26,12 +26,14 @@ function lotteryNum() {
   return (Math.round(Math.random() * 100) % 58) + 1;
 }
 
-function pickNumber(num, numbers) {
-  numbers = numbers.slice();
+function pickNumber(num: number, numbers: number[]) {
+  if (!numbers.includes(num)) {
+    return [...numbers, num].sort((a, b) => a - b);
+  }
   return numbers;
 }
 
-var luckyLotteryNumbers = [];
+let luckyLotteryNumbers: number[] = [];
 const NUM_COUNT = 6;
 
 while (luckyLotteryNumbers.length < NUM_COUNT) {
