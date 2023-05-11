@@ -12,7 +12,7 @@ Apr 2022.
 https://stackoverflow.com/questions/71909776/how-can-i-get-typescript-to-perform-tail-recursion-optimization
 */
 
-function isVowel(chr: string) {
+export function isVowel(chr: string) {
   return ["a", "e", "i", "o", "u"].includes(chr);
 }
 
@@ -22,7 +22,18 @@ function countVowelsNotPTC(str: string): number {
   return first + countVowelsNotPTC(str.slice(1));
 }
 
+const countVowelsPTC = (str: string, count: number = 0): number => {
+  count += isVowel(str[0]) ? 1 : 0;
+  if (str.length <= 1) return count;
+  return countVowelsPTC(str.slice(1), count);
+};
+
 console.log(
   "countVowels not proper tail calls",
   countVowelsNotPTC("The quick brown fox jumps over the lazy dog")
+);
+
+console.log(
+  "countVowels proper tail calls",
+  countVowelsPTC("The quick brown fox jumps over the lazy dog")
 );
